@@ -1,0 +1,13 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: test-freemarker #指定服务名
+  freemarker:
+    cache: false  #关闭模板缓存，方便测试
+    settings:
+      template_update_delay: 0 #检查模板更新延迟时间，设置为0表示立即检查，如果时间大于0会有缓存不方便进行模板测试
+#    springboot2.2.1之后将拓展名更换为ftlh了，如果想保持原来的配置需要加上下面的配置
+#    suffix: ftl
+

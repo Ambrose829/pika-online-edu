@@ -1,0 +1,21 @@
+server:
+  port: 31000
+spring:
+  application:
+    name: pika-service-manage-cms
+  data:
+    mongodb:
+      uri: mongodb://localhost
+      database: pika_cms
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+pika:
+  mq:
+    #CMS客户端监控的队列名称（不同客户端监控的队列不能重复）
+    queue: queue_cmspostpage_01
+    routingKey: 5a751fab6abb5044e0d19ea1 #此routingKey为门户站点ID

@@ -1,0 +1,16 @@
+server:
+  port: 50101
+spring:
+  application:
+    name: pika-govern-center
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://locahost:50101/eureka/
+
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
