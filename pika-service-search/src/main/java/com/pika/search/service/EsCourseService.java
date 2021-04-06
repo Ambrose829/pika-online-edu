@@ -52,7 +52,7 @@ public class EsCourseService {
         searchRequest.types(type);
 
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        //过虑源字段
+        //过滤源字段
         String[] source_field_array = source_field.split(",");
         searchSourceBuilder.fetchSource(source_field_array,new String[]{});
         //创建布尔查询对象

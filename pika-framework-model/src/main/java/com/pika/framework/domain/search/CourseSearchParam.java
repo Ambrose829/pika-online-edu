@@ -5,9 +5,6 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-/**
- * Created by admin on 2018/2/18.
- */
 @Data
 @ToString
 public class CourseSearchParam implements Serializable {
@@ -27,7 +24,7 @@ public class CourseSearchParam implements Serializable {
 
     //排序字段
     String sort;
-    //过虑字段
+    //过滤字段
     String filter;
 
 }

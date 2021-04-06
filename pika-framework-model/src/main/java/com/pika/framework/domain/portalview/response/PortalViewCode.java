@@ -4,10 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import com.pika.framework.model.response.ResultCode;
 import lombok.ToString;
 
-
-/**
- * Created by admin on 2018/3/5.
- */
 @ToString
 public enum PortalViewCode implements ResultCode {
     PortalView_ADDVIEWCOURSE_COURSEIDISNULL(false,42001,"课程id为空！"),

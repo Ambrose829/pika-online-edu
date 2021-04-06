@@ -2,10 +2,10 @@ server:
   port: ${port:40100}
 spring:
   application:
-    name: xc-search-service
-xuecheng:
+    name: pika-search-service
+pika:
   elasticsearch:
-    hostlist: ${eshostlist:127.0.0.1:9200} #多个结点中间用逗号分隔
+    hostlist: ${eshostlist:8.131.234.199:9200} #多个结点中间用逗号分隔
   course:
     index: xc_course
     type: doc
