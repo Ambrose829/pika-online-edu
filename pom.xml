@@ -21,6 +21,7 @@
         <module>pika-service-manage-course</module>
         <module>test-fastdfs</module>
         <module>pika-govern-center</module>
+        <module>pika-service-search</module>
     </modules>
 
     <properties>
