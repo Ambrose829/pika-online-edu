@@ -25,6 +25,10 @@
         <module>pika-service-ucenter-auth</module>
         <module>pika-service-ucenter</module>
         <module>pika-govern-gateway</module>
+        <module>pika-service-learning</module>
+        <module>pika-service-base-filesystem</module>
+        <module>pika-service-manage-media</module>
+        <module>pika-service-manage-media-processor</module>
     </modules>
 
     <properties>
