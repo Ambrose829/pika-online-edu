@@ -56,7 +56,7 @@ public class MediaFileService {
         if(size<=0){
             size = 10;
         }
-        Pageable pageable = new PageRequest(page,size);
+        Pageable pageable = PageRequest.of(page,size);
         //分页查询
         Page<MediaFile> all = mediaFileRepository.findAll(example, pageable);
         //总记录数

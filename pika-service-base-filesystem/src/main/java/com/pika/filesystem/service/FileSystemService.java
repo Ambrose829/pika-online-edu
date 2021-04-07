@@ -1,12 +1,12 @@
-package com.xuecheng.filesystem.service;
+package com.pika.filesystem.service;
 
 import com.alibaba.fastjson.JSON;
-import com.xuecheng.filesystem.dao.FileSystemRepository;
-import com.xuecheng.framework.domain.filesystem.FileSystem;
-import com.xuecheng.framework.domain.filesystem.response.FileSystemCode;
-import com.xuecheng.framework.domain.filesystem.response.UploadFileResult;
-import com.xuecheng.framework.exception.ExceptionCast;
-import com.xuecheng.framework.model.response.CommonCode;
+import com.pika.filesystem.dao.FileSystemRepository;
+import com.pika.framework.domain.filesystem.FileSystem;
+import com.pika.framework.domain.filesystem.response.FileSystemCode;
+import com.pika.framework.domain.filesystem.response.UploadFileResult;
+import com.pika.framework.exception.ExceptionCast;
+import com.pika.framework.model.response.CommonCode;
 import org.apache.commons.lang3.StringUtils;
 import org.csource.fastdfs.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +23,13 @@ import java.util.Map;
 @Service
 public class FileSystemService {
 
-    @Value("${xuecheng.fastdfs.tracker_servers}")
+    @Value("${pika.fastdfs.tracker_servers}")
     String tracker_servers;
-    @Value("${xuecheng.fastdfs.connect_timeout_in_seconds}")
+    @Value("${pika.fastdfs.connect_timeout_in_seconds}")
     int connect_timeout_in_seconds;
-    @Value("${xuecheng.fastdfs.network_timeout_in_seconds}")
+    @Value("${pika.fastdfs.network_timeout_in_seconds}")
     int network_timeout_in_seconds;
-    @Value("${xuecheng.fastdfs.charset}")
+    @Value("${pika.fastdfs.charset}")
     String charset;
 
     @Autowired

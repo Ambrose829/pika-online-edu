@@ -15,10 +15,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-@EntityScan(value = {"com.xuecheng.framework.domain.learning","com.xuecheng.framework.domain.task"})//扫描实体类
-@ComponentScan(basePackages={"com.xuecheng.api"})//扫描接口
-@ComponentScan(basePackages={"com.xuecheng.learning"})//扫描接口
-@ComponentScan(basePackages={"com.xuecheng.framework"})//扫描common下的所有类
+@EntityScan(value = {"com.pika.framework.domain.learning","com.pika.framework.domain.task"})//扫描实体类
+@ComponentScan(basePackages={"com.pika.api"})//扫描接口
+@ComponentScan(basePackages={"com.pika.learning"})//扫描接口
+@ComponentScan(basePackages={"com.pika.framework"})//扫描common下的所有类
 public class LearningApplication {
 
     public static void main(String[] args) throws Exception {

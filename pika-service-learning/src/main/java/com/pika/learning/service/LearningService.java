@@ -1,8 +1,8 @@
 package com.pika.learning.service;
 
 import com.pika.framework.domain.course.TeachplanMediaPub;
-import com.pika.framework.domain.learning.respones.GetMediaResult;
-import com.pika.framework.domain.learning.respones.LearningCode;
+import com.pika.framework.domain.learning.response.GetMediaResult;
+import com.pika.framework.domain.learning.response.LearningCode;
 import com.pika.framework.exception.ExceptionCast;
 import com.pika.framework.model.response.CommonCode;
 import com.pika.learning.client.CourseSearchClient;

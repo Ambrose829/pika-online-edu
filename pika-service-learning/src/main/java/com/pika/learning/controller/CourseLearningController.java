@@ -1,7 +1,7 @@
 package com.pika.learning.controller;
 
 import com.pika.api.learning.CourseLearningControllerApi;
-import com.pika.framework.domain.learning.respones.GetMediaResult;
+import com.pika.framework.domain.learning.response.GetMediaResult;
 import com.pika.learning.service.LearningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
