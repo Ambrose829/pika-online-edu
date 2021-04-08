@@ -6,7 +6,7 @@ spring:
   application:
     name: pika-service-ucenter-auth
   redis:
-    host: ${REDIS_HOST:127.0.0.1}
+    host: ${REDIS_HOST:8.131.71.215}
     port: ${REDIS_PORT:6379}
     timeout: 5000 #连接超时 毫秒
     jedis:
@@ -17,9 +17,9 @@ spring:
         maxWait: -1 #连接池最大等行时间 -1没有限制
   datasource:
     druid:
-      url: ${MYSQL_URL:jdbc:mysql://localhost:3306/xc_user?characterEncoding=utf-8}
+      url: ${MYSQL_URL:jdbc:mysql://8.131.71.215:3306/pika_user?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC}
       username: root
-      password: mysql
+      password: 123456
       driverClassName: com.mysql.jdbc.Driver
       initialSize: 5  #初始建立连接数量
       minIdle: 5  #最小连接数量
