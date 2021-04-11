@@ -3,6 +3,7 @@ package com.pika.search;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @create 2021/2/30
  * @description
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EntityScan("com.pika.framework.domain.search")//扫描实体类
 @ComponentScan(basePackages={"com.pika.api"})//扫描接口
 @ComponentScan(basePackages={"com.pika.search"})//扫描本项目下的所有类

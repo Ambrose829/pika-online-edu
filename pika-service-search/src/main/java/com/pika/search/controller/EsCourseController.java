@@ -41,16 +41,16 @@ public class EsCourseController implements EsCourseControllerApi {
     @Override
     @GetMapping(value="/getmedia/{teachplanId}")
     public TeachplanMediaPub getmedia(@PathVariable("teachplanId") String teachplanId) {
-        //将一个id加入数组，传给service方法
-        String[] teachplanIds = new String[]{teachplanId};
-        QueryResponseResult<TeachplanMediaPub> queryResponseResult = esCourseService.getmedia(teachplanIds);
-        QueryResult<TeachplanMediaPub> queryResult = queryResponseResult.getQueryResult();
-        if(queryResult != null){
-            List<TeachplanMediaPub> list = queryResult.getList();
-            if(list !=null && list.size()>0){
-                return list.get(0);
-            }
-        }
+//        //将一个id加入数组，传给service方法
+//        String[] teachplanIds = new String[]{teachplanId};
+//        QueryResponseResult<TeachplanMediaPub> queryResponseResult = esCourseService.getmedia(teachplanIds);
+//        QueryResult<TeachplanMediaPub> queryResult = queryResponseResult.getQueryResult();
+//        if(queryResult != null){
+//            List<TeachplanMediaPub> list = queryResult.getList();
+//            if(list !=null && list.size()>0){
+//                return list.get(0);
+//            }
+//        }
         return new TeachplanMediaPub();
     }
 }
