@@ -33,14 +33,14 @@ auth:
   tokenValiditySeconds: 1200  #token存储到redis的过期时间
   clientId: XcWebApp
   clientSecret: XcWebApp
-  cookieDomain: pika.com
+  cookieDomain: xuecheng.com
   cookieMaxAge: -1
 encrypt:
   key-store:
     location: classpath:/xc.keystore
-    secret: pikakeystore
+    secret: xuechengkeystore
     alias: xckey
-    password: pika
+    password: xuecheng
 eureka:
   client:
     registerWithEureka: true #服务注册开关

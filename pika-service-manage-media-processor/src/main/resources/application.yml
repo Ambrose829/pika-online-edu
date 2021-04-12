@@ -5,8 +5,8 @@ spring:
     name: pika-service-manage-media-processor
   data:
     mongodb:
-      uri:  mongodb://root:123@localhost:27017
-      database: xc_media
+      uri:  mongodb://localhost
+      database: pika_media
 #rabbitmq配置
   rabbitmq:
     host: 127.0.0.1

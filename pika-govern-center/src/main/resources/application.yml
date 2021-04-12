@@ -9,7 +9,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      defaultZone: http://locahost:50101/eureka/
+      defaultZone: http://127.0.0.1:50101/eureka/
 
   server:
     enable-self-preservation: false

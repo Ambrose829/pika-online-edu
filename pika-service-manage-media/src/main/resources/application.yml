@@ -5,10 +5,10 @@ spring:
     name: pika-service-manage-media
   data:
     mongodb:
-      uri:  mongodb://root:123@localhost:27017
-      database: xc_media
-xc-service-manage-media:
-  upload-location: F:/develop/video/
+      uri: mongodb://localhost
+      database: pika_media
+pika-service-manage-media:
+  upload-location: D:\pika\video
   mq:
     routingkey-media-video: routingkey_media_video
 eureka:

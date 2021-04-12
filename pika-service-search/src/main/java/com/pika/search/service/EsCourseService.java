@@ -120,11 +120,11 @@ public class EsCourseService {
         List<CoursePub> list = new ArrayList<>();
         try {
             //执行搜索
-            SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
+            SearchResponse searchResponse = restHighLevelClient.search(searchRequest);
             //获取响应结果
             SearchHits hits = searchResponse.getHits();
             //匹配的总记录数
-            long totalHits = hits.getTotalHits().value;
+            long totalHits = hits.getTotalHits();
             queryResult.setTotal(totalHits);
             SearchHit[] searchHits = hits.getHits();
             for(SearchHit hit:searchHits){
@@ -208,7 +208,7 @@ public class EsCourseService {
 
         Map<String,CoursePub> map = new HashMap<>();
         try {
-            SearchResponse search = restHighLevelClient.search(searchRequest,  RequestOptions.DEFAULT);
+            SearchResponse search = restHighLevelClient.search(searchRequest);
             SearchHits hits = search.getHits();
             SearchHit[] searchHits = hits.getHits();
             for(SearchHit hit:searchHits){

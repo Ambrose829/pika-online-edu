@@ -30,9 +30,9 @@ public class MediaUploadService {
     @Autowired
     MediaFileRepository mediaFileRepository;
 
-    @Value("${xc-service-manage-media.upload-location}")
+    @Value("${pika-service-manage-media.upload-location}")
     String upload_location;
-    @Value("${xc-service-manage-media.mq.routingkey-media-video}")
+    @Value("${pika-service-manage-media.mq.routingkey-media-video}")
     String routingkey_media_video;
 
     @Autowired
