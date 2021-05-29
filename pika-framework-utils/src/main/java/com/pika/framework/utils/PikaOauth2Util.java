@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 
-public class XcOauth2Util {
+public class PikaOauth2Util {
 
     public UserJwt getUserJwtFromHeader(HttpServletRequest request){
         Map<String, String> jwtClaims = Oauth2Util.getJwtClaimsFromHeader(request);

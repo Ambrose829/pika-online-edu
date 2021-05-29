@@ -14,5 +14,19 @@ import java.util.List;
 @Data
 @ToString
 public class TeachplanNode extends Teachplan {
+    /**
+     * 课程计划子节点
+     */
     List<TeachplanNode> children;
+
+    /**
+     * 媒资文件id
+     */
+    private String mediaId;
+
+    /**
+     * 媒资文件原始名
+     */
+    private String mediaFileOriginalName;
+
 }

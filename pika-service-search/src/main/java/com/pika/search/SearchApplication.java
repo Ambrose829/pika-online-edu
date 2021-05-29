@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @create 2021/2/30
  * @description
  */
+@EnableDiscoveryClient
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EntityScan("com.pika.framework.domain.search")//扫描实体类
 @ComponentScan(basePackages={"com.pika.api"})//扫描接口

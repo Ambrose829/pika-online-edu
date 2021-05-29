@@ -5,6 +5,8 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 
 /**
  * @author Pika
@@ -26,7 +28,10 @@ public class CmsTemplate {
     private String templateName;
     //模版参数
     private String templateParameter;
-
+    //模板文件路径
+    private String templateFilePath;
     //模版文件Id
     private String templateFileId;
+
+    private Date templateCreateTime;
 }

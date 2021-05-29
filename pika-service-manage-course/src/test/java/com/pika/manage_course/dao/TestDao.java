@@ -61,7 +61,7 @@ public class TestDao {
 
 //    @Test
 //    public void testDictionary() {
-//        SysDictionary bydType = sysDicthinaryRepository.findBydType("200");
+//        PikaDictionary bydType = sysDicthinaryRepository.findBydType("200");
 //        System.out.println(bydType);
 //    }
 }

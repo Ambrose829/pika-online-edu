@@ -18,7 +18,19 @@ public enum CourseCode implements ResultCode {
     COURSE_PUBLISH_COURSEIDISNULL(false,31004,"课程Id为空！"),
     COURSE_PUBLISH_VIEWERROR(false,31005,"发布课程视图出错！"),
     COURSE_MEDIS_URLISNULL(false,31101,"选择的媒资文件访问地址为空！"),
-    COURSE_MEDIS_NAMEISNULL(false,31102,"选择的媒资文件名称为空！");
+    COURSE_MEDIS_NAMEISNULL(false,31102,"选择的媒资文件名称为空！"),
+    COURSE_GET_NOTEXISTS(false,31103,"找不到课程信息！"),
+    COURSE_MEDIA_TEACHPLAN_GRADEERROR(false,31104,"只允许选择第三级的课程计划关联视频！"),
+    COURSE_PUBLISH_TEACHPLANISNULL(false, 31103, "添加课程计划关键信息为空！"),
+    COURSE_SELECT_TEACHPLANISNULL(false, 31109, "查询课程计划信息为空！"),
+
+    COURSE_SELECT_PARENTISNULL(false, 31104, "查询父节点信息为空！"),
+    COURSE_PUBLISH_COURSEBASEISNULL(false, 31105, "课程关键信息为空！"),
+    COURSE_SELECT_COURSEBASEISNULL(false, 31106, "查询课程信息为空！"),
+    COURSE_SELECT_COURSEMARKETISNULL(false, 31107, "查询课程营销信息为空！"),
+    COURSE_SELECT_COURSEPICISNULL(false, 31108, "查询课程图片信息为空！"),
+    COURSE_PUBLISH_CREATE_INDEX_ERROR(false, 31109, "创建课程索引信息失败！"),
+    SAVE_MEDIA_PARAM_IS_NULL(false, 31110, "绑定课程计划与媒资传入主要参数为空！");
 
     //操作代码
     @ApiModelProperty(value = "操作是否成功", example = "true", required = true)

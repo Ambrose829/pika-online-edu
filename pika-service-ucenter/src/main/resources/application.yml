@@ -5,9 +5,9 @@ spring:
     name: pika-service-ucenter
   datasource:
     druid:
-      url: ${MYSQL_URL:jdbc:mysql://8.131.71.215:3306/pika_user?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC}
+      url: ${MYSQL_URL:jdbc:mysql://127.0.0.1:3306/pika_user?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC}
       username: root
-      password: 123456
+      password: Pika123.
       driverClassName: com.mysql.jdbc.Driver
       initialSize: 5  #初始建立连接数量
       minIdle: 5  #最小连接数量

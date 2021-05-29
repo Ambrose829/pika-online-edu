@@ -14,9 +14,9 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-xc-service-manage-media:
+pika-service-manage-media:
   mq:
     queue-media-video-processor: queue_media_video_processor
     routingkey-media-video: routingkey_media_video
-  video-location: F:/develop/video/
-  ffmpeg-path: D:/Program Files/ffmpeg-20180227-fa0c9d6-win64-static/bin/ffmpeg.exe
+  video-location: D:\pika\video\
+  ffmpeg-path: D:/code/tools/ffmpeg-20180227-fa0c9d6-win64-static/bin/ffmpeg.exe

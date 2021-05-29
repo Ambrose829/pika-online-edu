@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 @ToString
 @Document(collection = "sys_dictionary")
-public class SysDictionary {
+public class PikaDictionary {
 
     @Id
     private String id;
@@ -28,5 +28,5 @@ public class SysDictionary {
     private String dType;
 
     @Field("d_value")
-    private List<SysDictionaryValue> dValue;
+    private List<PikaDictionaryValue> dValue;
 }

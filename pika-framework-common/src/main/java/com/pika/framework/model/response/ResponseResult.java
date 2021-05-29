@@ -28,6 +28,12 @@ public class ResponseResult implements Response {
         this.message = resultCode.message();
     }
 
+    public ResponseResult(boolean success, int code, String message) {
+        this.success = success;
+        this.code = code;
+        this.message = message;
+    }
+
     public static ResponseResult SUCCESS(){
         return new ResponseResult(CommonCode.SUCCESS);
     }

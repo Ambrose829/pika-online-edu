@@ -22,18 +22,18 @@ import java.util.Optional;
 @Component
 public class MediaProcessTask {
 
-    @Value("${xc-service-manage-media.ffmpeg-path}")
+    @Value("${pika-service-manage-media.ffmpeg-path}")
     String ffmpeg_path;
 
     //上传文件根目录
-    @Value("${xc-service-manage-media.video-location}")
+    @Value("${pika-service-manage-media.video-location}")
     String serverPath;
 
     @Autowired
     MediaFileRepository mediaFileRepository;
 
     //接收视频处理消息进行视频处理
-    @RabbitListener(queues="${xc-service-manage-media.mq.queue-media-video-processor}",containerFactory = "customContainerFactory")
+    @RabbitListener(queues="${pika-service-manage-media.mq.queue-media-video-processor}",containerFactory = "customContainerFactory")
     public void receiveMediaProcessTask(String msg){
         //1、解析消息内容，得到mediaId
         Map map = JSON.parseObject(msg, Map.class);

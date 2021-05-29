@@ -1,6 +1,6 @@
 package com.pika.manage_cms.dao;
 
-import com.pika.framework.domain.system.SysDictionary;
+import com.pika.framework.domain.system.PikaDictionary;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 
@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @create 2020/11/9
  * @description
  */
-public interface SysDicthinaryRepository extends MongoRepository<SysDictionary, String> {
+public interface SysDicthinaryRepository extends MongoRepository<PikaDictionary, String> {
 
-    SysDictionary findBydType(String dType);
+    PikaDictionary findBydType(String dType);
 
 }

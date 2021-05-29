@@ -16,7 +16,15 @@ public enum CmsCode implements ResultCode {
     CMS_GENERATEHTML_HTMLISNULL(false,24005,"生成的静态html为空！"),
     CMS_GENERATEHTML_SAVEHTMLERROR(false,24005,"保存静态html出错！"),
     CMS_PAGE_NOTEXISTS(false, 24006, "页面不存在!"),
-    CMS_COURSE_PERVIEWISNULL(false,24007,"预览页面为空！");
+    CMS_COURSE_PERVIEWISNULL(false,24007,"预览页面为空！"),
+    CMS_POSTPAGE_PAGEISNULL(false,24008,"发布页面为空！"),
+    CMS_ADDPAGE_CMSPAGEISNULL(false,24009,"新增页面不存在"),
+    CMS_ADDPAGE_CMSSITEISNULL(false,24010,"站点不存在"),
+    CMS_ADDPAGE_CMSTEMPLATEISNULL(false,24011,"添加的模板数据不存在"),
+    CMS_ADDPAGE_UPLOADTEMPLATEISERROR(false,24012,"上传模板文件出错"),
+    CMS_ADDPAGE_TEMPLATEIDISNULL(false,24013,"模板id为空"),
+    CMS_ADDPAGE_SAVEPAGEERROR(false,24014,"保存页面失败！");
+
     //操作代码
     boolean success;
     //操作代码

@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
  */
 @Data
 @ToString
-public class SysDictionaryValue {
+public class PikaDictionaryValue {
 
     @Field("sd_id")
     private String sdId;

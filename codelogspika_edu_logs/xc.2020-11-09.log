@@ -2229,7 +2229,7 @@ Unconditional classes:
 2020-11-09 12:03:44.188 [http-nio-31200-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-09 12:03:44.189 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-11-09 12:03:44.212 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 23 ms
-2020-11-09 12:04:16.268 [http-nio-31200-exec-8] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.SysDictionary! Did you mean: dType,DType?
+2020-11-09 12:04:16.268 [http-nio-31200-exec-8] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.PikaDictionary! Did you mean: dType,DType?
 2020-11-09 12:06:59.706 [SpringContextShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c2db68f, started on Mon Nov 09 12:02:52 CST 2020
 2020-11-09 12:06:59.711 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-09 12:06:59.726 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -3346,7 +3346,7 @@ Unconditional classes:
 2020-11-09 12:11:14.430 [http-nio-31200-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-09 12:11:14.430 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-11-09 12:11:14.448 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
-2020-11-09 12:11:20.050 [http-nio-31200-exec-7] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.SysDictionary! Did you mean: dType,DType?
+2020-11-09 12:11:20.050 [http-nio-31200-exec-7] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.PikaDictionary! Did you mean: dType,DType?
 2020-11-09 12:22:19.374 [SpringContextShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5669c5fb, started on Mon Nov 09 12:07:12 CST 2020
 2020-11-09 12:22:19.379 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-09 12:22:19.392 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -4463,7 +4463,7 @@ Unconditional classes:
 2020-11-09 12:25:24.735 [http-nio-31200-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-11-09 12:25:24.735 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-11-09 12:25:24.753 [http-nio-31200-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
-2020-11-09 12:25:31.835 [http-nio-31200-exec-4] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.SysDictionary! Did you mean: dType,DType?
+2020-11-09 12:25:31.835 [http-nio-31200-exec-4] ERROR c.p.f.exception.ExceptionCatch - catch exception:No property 'DType' found on class com.pika.framework.domain.system.PikaDictionary! Did you mean: dType,DType?
 2020-11-09 12:28:41.038 [SpringContextShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b00f608, started on Mon Nov 09 12:23:36 CST 2020
 2020-11-09 12:28:41.045 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-09 12:28:41.059 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

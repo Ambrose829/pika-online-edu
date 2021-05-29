@@ -1,6 +1,6 @@
 package com.pika.manage_cms.service;
 
-import com.pika.framework.domain.system.SysDictionary;
+import com.pika.framework.domain.system.PikaDictionary;
 import com.pika.manage_cms.dao.SysDicthinaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class DictionaryService {
      * @param type
      * @return
      */
-    public SysDictionary getByType(String type) {
+    public PikaDictionary getByType(String type) {
         if (type == null) {
             return null;
         }

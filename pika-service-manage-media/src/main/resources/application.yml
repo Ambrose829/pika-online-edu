@@ -8,7 +8,7 @@ spring:
       uri: mongodb://localhost
       database: pika_media
 pika-service-manage-media:
-  upload-location: D:\pika\video
+  upload-location: D:\pika\video\
   mq:
     routingkey-media-video: routingkey_media_video
 eureka:

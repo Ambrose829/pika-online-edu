@@ -12,10 +12,10 @@ import java.util.Date;
 @Data
 @ToString
 @Entity
-@Table(name="pika_learning_list")
+@Table(name="pika_learning_course")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
-public class XcLearningList implements Serializable {
-    private static final long serialVersionUID = -916357210051689799L;
+public class PikaLearningCourse implements Serializable {
+    private static final long serialVersionUID = -916357210051789799L;
     @Id
     @GeneratedValue(generator = "jpa-uuid")
     @Column(length = 32)
@@ -24,6 +24,9 @@ public class XcLearningList implements Serializable {
     private String courseId;
     @Column(name = "user_id")
     private String userId;
+    @Column(name = "teachplan_id")
+    private String teachplanId;
+    private String valid;
     @Column(name = "start_time")
     private Date startTime;
     @Column(name = "end_time")

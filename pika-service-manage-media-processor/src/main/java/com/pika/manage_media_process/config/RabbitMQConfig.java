@@ -16,11 +16,11 @@ public class RabbitMQConfig {
     public static final String EX_MEDIA_PROCESSTASK = "ex_media_processor";
 
     //视频处理队列
-    @Value("${xc-service-manage-media.mq.queue-media-video-processor}")
+    @Value("${pika-service-manage-media.mq.queue-media-video-processor}")
     public  String queue_media_video_processtask;
 
     //视频处理路由
-    @Value("${xc-service-manage-media.mq.routingkey-media-video}")
+    @Value("${pika-service-manage-media.mq.routingkey-media-video}")
     public  String routingkey_media_video;
 
     //消费者并发数量
