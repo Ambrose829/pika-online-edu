@@ -1,6 +1,6 @@
 package com.pika.api.ucenter;
 
-import com.pika.framework.domain.ucenter.ext.XcUserExt;
+import com.pika.framework.domain.ucenter.ext.PikaUserExt;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -10,5 +10,5 @@ import io.swagger.annotations.ApiOperation;
 @Api(value = "用户中心",description = "用户中心管理")
 public interface UcenterControllerApi {
     @ApiOperation("根据用户账号查询用户信息")
-    public XcUserExt getUserext(String username);
+    public PikaUserExt getUserext(String username);
 }

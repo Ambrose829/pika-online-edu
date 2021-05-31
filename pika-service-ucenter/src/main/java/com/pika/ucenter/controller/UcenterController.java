@@ -1,13 +1,10 @@
 package com.pika.ucenter.controller;
 
 import com.pika.api.ucenter.UcenterControllerApi;
-import com.pika.framework.domain.ucenter.ext.XcUserExt;
+import com.pika.framework.domain.ucenter.ext.PikaUserExt;
 import com.pika.ucenter.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Administrator
@@ -20,8 +17,9 @@ public class UcenterController implements UcenterControllerApi {
     UserService userService;
 
     @Override
-    @GetMapping("/getuserext")
-    public XcUserExt getUserext(@RequestParam("username") String username) {
+    @GetMapping("/getuserext/{username}")
+    public PikaUserExt getUserext(@PathVariable("username") String username) {
+        System.out.println(username);
         return userService.getUserExt(username);
     }
 }

@@ -1,7 +1,7 @@
 package com.pika.auth.service;
 
 import com.alibaba.fastjson.JSON;
-import com.pika.framework.client.XcServiceList;
+import com.pika.framework.client.PikaServiceList;
 import com.pika.framework.domain.ucenter.ext.AuthToken;
 import com.pika.framework.domain.ucenter.response.AuthCode;
 import com.pika.framework.exception.ExceptionCast;
@@ -103,7 +103,7 @@ public class AuthService {
     private AuthToken applyToken(String username, String password, String clientId, String clientSecret){
         //从eureka中获取认证服务的地址（因为spring security在认证服务中）
         //从eureka中获取认证服务的一个实例的地址
-        ServiceInstance serviceInstance = loadBalancerClient.choose(XcServiceList.XC_SERVICE_UCENTER_AUTH);
+        ServiceInstance serviceInstance = loadBalancerClient.choose(PikaServiceList.PIKA_SERVICE_UCENTER_AUTH);
         //此地址就是http://ip:port
         URI uri = serviceInstance.getUri();
         //令牌申请的地址 http://localhost:40400/auth/oauth/token
@@ -146,7 +146,7 @@ public class AuthService {
                 String error_description = (String) bodyMap.get("error_description");
                 if(error_description.indexOf("UserDetailsService returned null")>=0){
                     ExceptionCast.cast(AuthCode.AUTH_ACCOUNT_NOTEXISTS);
-                }else if(error_description.indexOf("坏的凭证")>=0){
+                }else if((error_description.indexOf("坏的凭证")>=0) || (error_description.indexOf("用户名或密码错误")>=0)){
                     ExceptionCast.cast(AuthCode.AUTH_CREDENTIAL_ERROR);
                 }
             }

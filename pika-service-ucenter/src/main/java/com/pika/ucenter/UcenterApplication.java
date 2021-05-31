@@ -13,7 +13,7 @@ import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.pika.ucenter"})
 @MapperScan("com.pika.ucenter.dao")
 @EntityScan("com.pika.framework.domain.ucenter")//扫描实体类
 @ComponentScan(basePackages={"com.pika.api"})//扫描接口

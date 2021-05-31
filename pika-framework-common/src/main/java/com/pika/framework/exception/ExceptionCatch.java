@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.nio.file.AccessDeniedException;
+
 /**
  * @author Pika
  * @create 2020/11/2
@@ -27,21 +29,29 @@ public class ExceptionCatch {
     //定义map的builder对象，去构建ImmutableMap
     protected static ImmutableMap.Builder<Class<? extends Throwable>, ResultCode> builder = ImmutableMap.builder();
 
+    //捕获CustomException此类异常
+    @ExceptionHandler(CustomException.class)
+    @ResponseBody
+    public ResponseResult customException(CustomException customException){
+        //记录日志
+        LOGGER.error("catch exception:{}",customException.getMessage());
+        ResultCode resultCode = customException.getResultCode();
+        return new ResponseResult(resultCode);
+    }
+    //捕获Exception此类异常
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public ResponseResult customException(Exception exception) {
+    public ResponseResult exception(Exception exception){
         //记录日志
-        LOGGER.error("catch exception:{}", exception.getMessage());
-
-        if (EXCEPTIONS == null) {
-            EXCEPTIONS = builder.build();//EXCEPTIONS构建成功，不能更改
+        LOGGER.error("catch exception:{}",exception.getMessage());
+        if(EXCEPTIONS == null){
+            EXCEPTIONS = builder.build();//EXCEPTIONS构建成功
         }
-        //从EXCEPTIONS中找到异常类型所对应的错误代码，如果找到了将错误代码相应给用户，如果找不到响应99999异常
+        //从EXCEPTIONS中找异常类型所对应的错误代码，如果找到了将错误代码响应给用户，如果找不到给用户响应99999异常
         ResultCode resultCode = EXCEPTIONS.get(exception.getClass());
-
-        if (resultCode != null) {
+        if(resultCode !=null){
             return new ResponseResult(resultCode);
-        } else {
+        }else{
             //返回99999异常
             return new ResponseResult(CommonCode.SERVER_ERROR);
         }
@@ -52,5 +62,8 @@ public class ExceptionCatch {
     static {
         //定义异常类型所对应的错误代码
         builder.put(HttpMessageNotReadableException.class,CommonCode.INVALID_PARAM);
+        //设置权限不足的异常提示代码（提示权限不足）
+        builder.put(AccessDeniedException.class,CommonCode.UNAUTHORISE);
+
     }
 }

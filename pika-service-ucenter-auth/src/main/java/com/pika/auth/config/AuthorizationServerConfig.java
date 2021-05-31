@@ -69,6 +69,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
                 // client_credentials:客户端认证，refresh_token：刷新令牌，password：密码方式认证
                 .authorizedGrantTypes("authorization_code", "client_credentials", "refresh_token", "password")
                 .scopes("app");//客户端范围，名称自定义，必填*/
+
     }
 
     //token的存储方法

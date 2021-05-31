@@ -1,7 +1,8 @@
 package com.pika.auth.service;
 
+import com.pika.auth.client.UserClient;
 import com.pika.framework.domain.ucenter.XcMenu;
-import com.pika.framework.domain.ucenter.ext.XcUserExt;
+import com.pika.framework.domain.ucenter.ext.PikaUserExt;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -25,6 +26,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     ClientDetailsService clientDetailsService;
 
+    @Autowired
+    UserClient userClient;
+
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //取出身份，如果身份为空说明没有认证
@@ -38,18 +43,28 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 return new User(username,clientSecret,AuthorityUtils.commaSeparatedStringToAuthorityList(""));
             }
         }
+
         if (StringUtils.isEmpty(username)) {
             return null;
         }
-        XcUserExt userext = new XcUserExt();
-        userext.setUsername("itcast");
-        userext.setPassword(new BCryptPasswordEncoder().encode("123"));
-        userext.setPermissions(new ArrayList<XcMenu>());
+//        PikaUserExt userext = new PikaUserExt();
+//        userext.setUsername("itcast");
+//        userext.setPassword(new BCryptPasswordEncoder().encode("123"));
+        PikaUserExt userext = userClient.getUserext(username);
         if(userext == null){
             return null;
         }
+
+
+
+        userext.setPermissions(new ArrayList<XcMenu>());
+
+
+
+
         //取出正确密码（hash值）
         String password = userext.getPassword();
+
         //这里暂时使用静态密码
 //       String password ="123";
         //用户权限，这里暂时使用静态数据，最终会从数据库读取

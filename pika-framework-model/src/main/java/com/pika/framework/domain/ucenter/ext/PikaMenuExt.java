@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @ToString
-public class XcMenuExt extends XcMenu {
+public class PikaMenuExt extends XcMenu {
 
     List<CategoryNode> children;
 }

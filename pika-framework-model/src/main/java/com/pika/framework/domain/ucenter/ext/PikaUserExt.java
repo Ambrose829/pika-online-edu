@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @ToString
-public class XcUserExt extends XcUser {
+public class PikaUserExt extends XcUser {
 
     //权限信息
     private List<XcMenu> permissions;

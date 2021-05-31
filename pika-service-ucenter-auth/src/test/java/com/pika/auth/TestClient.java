@@ -1,6 +1,7 @@
 package com.pika.auth;
 
-import com.pika.framework.client.XcServiceList;
+import com.pika.framework.client.PikaServiceList;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.LinkedMultiValueMap;
@@ -41,7 +43,7 @@ public class TestClient {
     public void testClient(){
         //从eureka中获取认证服务的地址（因为spring security在认证服务中）
         //从eureka中获取认证服务的一个实例的地址
-        ServiceInstance serviceInstance = loadBalancerClient.choose(XcServiceList.XC_SERVICE_UCENTER_AUTH);
+        ServiceInstance serviceInstance = loadBalancerClient.choose(PikaServiceList.PIKA_SERVICE_UCENTER_AUTH);
         //此地址就是http://ip:port
         URI uri = serviceInstance.getUri();
         //令牌申请的地址 http://localhost:40400/auth/oauth/token
@@ -83,6 +85,13 @@ public class TestClient {
         //将串进行base64编码
         byte[] encode = Base64Utils.encode(string.getBytes());
         return "Basic "+new String(encode);
+    }
+
+
+    @Test
+    public void password() {
+        String str = new BCryptPasswordEncoder().encode("123456");
+        System.out.println(str);
     }
 
 }

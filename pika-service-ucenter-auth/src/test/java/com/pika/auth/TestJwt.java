@@ -29,16 +29,16 @@ public class TestJwt {
     @Test
     public void testCreateJwt(){
         //密钥库文件
-        String keystore = "xc.keystore";
+        String keystore = "pika.keystore";
         //密钥库的密码
         String keystore_password = "pikakeystore";
 
         //密钥库文件路径
         ClassPathResource classPathResource = new ClassPathResource(keystore);
         //密钥别名
-        String alias  = "xckey";
+        String alias  = "pikakey";
         //密钥的访问密码
-        String key_password = "pika";
+        String key_password = "pikapwd";
         //密钥工厂
         KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(classPathResource,keystore_password.toCharArray());
         //密钥对（公钥和私钥）

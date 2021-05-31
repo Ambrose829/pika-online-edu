@@ -11,9 +11,9 @@ import java.io.Serializable;
 @Data
 @ToString
 @Entity
-@Table(name="xc_company_user")
+@Table(name="pika_company_user")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
-public class XcCompanyUser implements Serializable {
+public class PikaCompanyUser implements Serializable {
     private static final long serialVersionUID = -916357110051689786L;
     @Id
     @GeneratedValue(generator = "jpa-uuid")
